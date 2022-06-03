@@ -15,7 +15,7 @@ export interface Currency {
 })
 export class CurrencyService {
     static url = 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json'
-    static currencyFilter = ['USD', 'EUR', 'CNY', 'CZK', 'GBP', 'PLN']
+    // static currencyFilter = ['USD', 'EUR', 'CNY', 'CZK', 'GBP', 'PLN']
 
     constructor( private http: HttpClient ) {}
 
@@ -26,7 +26,8 @@ export class CurrencyService {
                 if (!currency) {
                     return []
                 }
-                return currency.filter( f => CurrencyService.currencyFilter.includes(f.cc))
+                // return currency.filter( f => CurrencyService.currencyFilter.includes(f.cc))
+                return currency
             }))
     }
 }

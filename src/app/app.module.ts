@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { appReducers } from './store/reducers/app.reducers';
+import { CurrencyTableComponent } from './currency-table/currency-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MainComponent
+    MainComponent,
+    CurrencyTableComponent
   ],
   imports: [
     BrowserModule,

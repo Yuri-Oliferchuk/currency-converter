@@ -1,0 +1,22 @@
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>ID валюти</th>
+                <th>Валюта</th>
+                <th>Назва валюти</th>
+                <th>Дата</th>
+                <th>Курс обміну</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let currency of currencyArray">
+                <th>{{currency.r030}}</th>
+                <th>{{currency.cc}}</th>
+                <th>{{currency.txt}}</th>
+                <th>{{currency.exchangedate}}</th>
+                <th>{{currency.rate}}</th>
+            </tr>
+        </tbody>
+    </table>
+</div>

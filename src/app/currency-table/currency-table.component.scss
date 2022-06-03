@@ -1,0 +1,33 @@
+.table-container {
+    width: 100%;
+    height: 361px;
+    display: block;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.table-container::-webkit-scrollbar {
+    width: 0;
+  }
+
+table, td, th, tr {
+    border: 1px solid rgb(90, 90, 90);
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    overflow-x: auto;
+
+    thead {
+        height: 2rem;
+        background-color: rgb(160, 160, 190);
+    }
+
+    tbody {
+        td, th, tr {
+            height: 1.4rem;
+        }
+    }
+}
