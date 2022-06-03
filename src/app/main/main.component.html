@@ -1,5 +1,28 @@
 <div class="converter-table">
-    <pre>
-        <!-- {{currency | json}} -->
-    </pre>
+    <h1>Конвертор валют на {{ exchangedate }}</h1>
+
+    <div class="converter-field">
+        <div class="convert-from">
+            <input type="text"
+                   [value]="valueFrom" 
+                   (keypress)="numberOnly($event)"
+                   (input)="onChangeFrom($any($event.target).value)"
+            >
+            <select (input)="onChangeCurrencyFrom($any($event.target).value)">
+                <option *ngFor="let c of countries" [value]="c.cc">{{c.cc}}</option>
+            </select>
+        </div>
+        <div><b>>></b></div>
+        <div class="convert-to">
+            <input type="text" 
+                   [value]="valueTo" 
+                   (keypress)="numberOnly($event)"
+                   (input)="onChangeTo($any($event.target).value)"
+            >
+            <select (change)="onChangeCurrencyTo($any($event.target).value)">
+                <option *ngFor="let c of countries" [value]="c.cc">{{c.cc}}</option>
+            </select>
+        </div>
+    </div>
+    
 </div>

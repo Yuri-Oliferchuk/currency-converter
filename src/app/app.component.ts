@@ -12,7 +12,6 @@ import { CurrencyService } from './utils/currency.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  // currency: Currency[];
   config$ = this._store.pipe(select(selectInitialization))
 
   constructor( private currencyServise: CurrencyService, 
@@ -23,7 +22,6 @@ export class AppComponent {
       next: (currency: any) => {
         this._store.dispatch(new GetCurrency(currency))
         this._store.dispatch(new ToggleInitializeStatus)
-        // console.log(this.currency$.subscribe((value: any) =>  console.log(value)))
       },
       error: (e) => console.error(e)
     })
