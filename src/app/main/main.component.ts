@@ -65,12 +65,12 @@ export class MainComponent implements OnInit {
 
   numberOnly(event: any): boolean {
     const charCode = (event.which) ? event.which : event.keyCode;
-    if (String(event.target.value).lastIndexOf('.') !== -1) {
-      if (String(event.target.value).length - String(event.target.value).lastIndexOf('.') > 2) {
-        event.preventDefault();
-        return false;
-      }
-    }
+    // if (String(event.target.value).lastIndexOf('.') !== -1) {
+    //   if (String(event.target.value).length - String(event.target.value).lastIndexOf('.') > 2) {
+    //     event.preventDefault();
+    //     return false;
+    //   }
+    // }
     if (charCode === 46 && String(event.target.value).indexOf('.') !== -1 ) {
       event.preventDefault();
       return false;
